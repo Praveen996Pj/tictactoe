@@ -129,4 +129,10 @@
   .playerName, .winStatus {
     min-width: 100px;
   }
+  .playSides {
+    flex-direction: column;
+  }
+  .playSidesImg {
+    width: 100px;
+  }
 }
