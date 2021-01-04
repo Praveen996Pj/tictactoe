@@ -1,9 +1,14 @@
 .playMode, .selectPlaySide, .playGame {
+  background: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.selectPlaySide {
+  justify-content: space-around;
 }
 
 .logoImage {
@@ -12,22 +17,24 @@
 }
 
 .gameHeadind2 {
-  font-size: 18px;
-  color: black;
-  margin: 30px 0px;
+  font-size: 16px;
+  color: lightslategray;
+  margin: 40px 0px;
   font-weight: bold;
 }
 
 .basicButton {
   cursor: pointer;
   margin: 10px 0px;
-  min-width: 100px;
-  max-width: 100px;
-  width: 100px;
-  border-radius: 10px;
-  padding: 5px;
+  min-width: 120px;
+  max-width: 120px;
+  width: 120px;
+  border-radius: 15px;
+  padding: 8px;
   border: 0px;
-  box-shadow: 0px 0px 3px;
+  color: gray;
+  box-shadow: grey 0px 3px 5px;
+  background: white;
 }
 
 .withAIButton {
@@ -44,23 +51,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 10px;
+  min-width: 130px;
+  max-width: 130px;
+  width: 130px;
 }
 
 .playSidesImg {
   width: 300px;
 }
 
+.checkedImg {
+  opacity: 0.3;
+}
+
 .radioInput {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  margin: 5px;
+  margin: 20px 0px;
 }
 
 .gameBoard {
-
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 0px 3px;
 }
 
 .board {
@@ -93,16 +109,19 @@
 }
 
 .playerName, .winStatus {
+  font-size: 18px;
   text-align: center;
-  padding: 3px;
+  padding: 1px;
   min-width: 150px;
+  font-weight: bold;
 }
 
 .winStatus {
   background: #3cc6f3;
   border-radius: 10px;
-  color: white;
+  background: white;
   margin-bottom: 10px;
+  box-shadow: 0px 0px 10px;
 }
 
 .winnerStatus {
@@ -114,23 +133,26 @@
   justify-content: space-between;
 }
 
+.textField {
+  min-width: 120px;
+  max-width: 120px;
+  width: 120px;
+}
+
 @media only screen and (max-width: 600px) {
   .logoImage {
-    width: 300px;
+    width: 200px;
     height: auto;
   }
   .boardRow {
-    height: 100px;
+    height: 90px;
   }
   .square {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
   }
   .playerName, .winStatus {
     min-width: 100px;
-  }
-  .playSides {
-    flex-direction: column;
   }
   .playSidesImg {
     width: 100px;

@@ -13,7 +13,7 @@ export default function SelectOpponent(props) {
       <div className = 'gameHeadind2'>Pick your side</div>
       <div className = 'playSides'>
         <div className = 'playSide'>
-          <img className = 'playSidesImg' src = {playSides.CROSS} />
+          <img className = {`playSidesImg ${selectSideX? 'checkedImg': ''}`} src = {playSides.CROSS} />
           <input
             type = 'radio'
             className = 'radioInput'
@@ -24,6 +24,7 @@ export default function SelectOpponent(props) {
             playWithFriend || (!playWithFriend && selectSideX)?
             <input
               type = 'text'
+              className = 'textField'
               placeholder = {'Enter Player Name'}
               onChange = {(event) => changePlayerXName(event.target.value)}
               value = {playerXName}
@@ -31,7 +32,7 @@ export default function SelectOpponent(props) {
           }
         </div>
         <div className = 'playSide'>
-          <img className = 'playSidesImg' src = {playSides.CIRCLE} />
+          <img className = {`playSidesImg ${!selectSideX? 'checkedImg': ''}`} src = {playSides.CIRCLE} />
           <input
             type = 'radio'
             className = 'radioInput'
@@ -42,6 +43,7 @@ export default function SelectOpponent(props) {
             playWithFriend || (!playWithFriend && !selectSideX)?
             <input
               type = 'text'
+              className = 'textField'
               placeholder = {'Enter Player Name'}
               onChange = {(event) => changePlayerOName(event.target.value)}
               value = {playerOName}
